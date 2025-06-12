@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Homemade+Apple&family=Afacad+Flux&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --purple: #f8da8c;
+            --purple-light: #795b2d;
+            --dark-blue: #fff5ed;
+            --blue: #c0915c;
+            --skyblue: #fff7eba9;
+    
+        }
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            font-family: Afacad Flux , sans-serif;
+        }
+        body {
+            background: linear-gradient(45deg, var(--purple), var(--purple-light));
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 100%;
+            width: 100%;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        .profile-card {
+            background: #492807;
+            width: 400px;
+            padding: 3rem;
+            border-radius: 10px;
+            min-height: 400px;
+            position: relative;
+            color: #fff;
+            margin: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+        .profile-card .profile-pic {
+            margin-top: 15px;
+            overflow: hidden;
+        }
+        .profile-card .profile-pic img {
+            border-radius: 10px;
+        }
+        .profile-card .profile-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+        }
+        .profile-details .intro {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .profile-details .intro h2 {
+            margin-top: 20px;
+        }
+        .profile-details .intro h4 {
+            background: #865f26;
+            font-weight: 400;
+            border-radius: 4px;
+            padding: 5px 10px;
+            margin: 8px;
+        }
+        .profile-details .intro .social {
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+        .profile-details .intro .social i {
+            color: #ddd;
+            font-size: 16px;
+            background-color: #222222;
+            margin: 5px;
+            height: 35px;
+            width: 35px;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 5px;
+            transition: 0.5s;
+        }
+        .profile-details .intro .social i:hover {
+            transform: scale(1.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .profile-details .contact-info {
+            background-color: #c0915c;
+            padding: 15px;
+            border-radius: 10px;
+            width: 100%;
+        }
+        .profile-details .contact-info .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 10px 0;
+            margin-bottom: 10px;
+        }
+        .contact-info .row .icon {
+            height: 40px;
+            width: 40px;
+            line-height: 40px;
+            border-radius: 5px;
+            background-color: #111;
+            text-align: center;
+            color: #ffe3b9;
+            transition: 0.5s;
+        }
+        .row .icon:hover {
+            transform: scale(1.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .row .content {
+            min-width: 70%;
+        }
+        .row .content span {
+            font-size: 12px;
+        }
+        .home-btn, .next-btn {
+            background: linear-gradient(45deg, #f7d49d, #ffd092);
+            color: #000000;
+            padding: 1rem 3rem;
+            border-radius: 30px;
+            margin-top: 1.5rem;
+            border: none;
+        }
+        .about {
+            background-color: #ffffff;
+            max-width: 800px;
+            padding: 2rem 3rem;
+            border-radius: 10px;
+        }
+        .about h1 {
+            color: #644040;
+            margin-bottom: 1.1rem;
+            position: relative;
+            display: inline-block;
+            font-size: 3.5rem;
+        }
+        .about h1::after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            right: -50%;
+            width: 45%;
+            height: 3px;
+            background: linear-gradient(45deg, #ffffff, #ffffff);
+        }
+        .about h2 {
+            color: #644040;
+            font-size: 2rem;
+            margin: 0.5rem 0;
+        }
+        .about p {
+            color: #644040;
+            margin: 1.5rem 0;
+        }
+        .about .work {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+        }
+        .work .workbox {
+            display: flex;
+            justify-content: space-between;
+            border-radius: 8px;
+            border: 1px solid #333;
+            padding: 1rem;
+            margin: 1rem;
+        }
+        .work .workbox .desc {
+            width: 75%;
+            color: #555;
+        }
+        .work .workbox .desc h3 {
+            color: #a1702b;
+            margin-bottom: 3px;
+        }
+        .work .workbox .desc p {
+            margin: 0px;
+        }
+        @media (max-width: 768px) {
+            .about {
+                width: 100%;
+                max-width: 400px;
+                padding: 1rem;
+                margin: 1rem;
+            }
+            .about h1 {
+                font-size: 2.2rem;
+            }
+            .about .work {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(4, auto);
+            }
+        }
+
+        .icon-container {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .icon-container a {
+            font-size: 24px;
+            color: white;
+            text-decoration: none;
+            background-color: black;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .icon-container a:hover {
+            color: #ffd390;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .icon-container a.prev {
+            left: 20px;
+            position: fixed;
+        }
+
+        .icon-container a.next {
+            right: 20px; 
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="profile-card"> 
+            <div class="profile-pic">
+                <img src="aboutme logo.png" alt="user avatar">
+            </div>
+
+            <div class="profile-details">
+                <div class="intro">
+                    <h2>Neysa Alya M</h2>
+                    <h4>Student</h4>
+                    <div class="social">
+                        <a href="https://www.instagram.com/harajukyu" target="_blank"><i class="fab fa-instagram" ></i></a>
+                        <a href="https://www.pinterest.com/belvouirs" target="_blank"><i class="fab fa-pinterest" ></i></a>
+                        <a href="https://boxd.it/8UrBt" target="_blank"><i class="fa-solid fa-clapperboard"></i></a>
+                        <a href="https://open.spotify.com/user/31smhdphbwt2ezbselsgvv5axaha?si=ef99d346948d4d92" target="_blank"><i class="fab fa-spotify"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <div class="row">
+                        <div class="icon">
+                            <a href="https://sites.google.com/view/informatikaberbagi/home" target="_blank"><i class="fa-solid fa-chalkboard-user"></i></a>
+                        </div>
+                        <div class="content">
+                            <span>Teacher</span>
+                            <h5>Hj. Deswati, S.Kom., M.Pd</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="icon">
+                            <i class="fa-solid fa-book"></i>
+                        </div>
+                        <div class="content">
+                            <span>Subject</span>
+                            <h5>Informatika</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="icon">
+                            <i class="fa-solid fa-school"></i>
+                        </div>
+                        <div class="content">
+                            <span>School</span>
+                            <h5>SMAN 1 Bekasi</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="about">
+        <h1>About Me</h1>
+
+        <p>Hello! I am a student from SMAN 1 Bekasi. I major in Informatics class at my school and I'm currently in my senior year. My favorite things to do are reading Japanese horror books and watching films. My MBTI type is INFJ and my Hogwarts House is Ravenclaw. My favorite character is "Phosphophyllite" from a show called "Land of the Lustrous". It's probably obvious, but I love the color brown :] Also! I listen to Lamp a lot. If you have the same interests as me, feel free to hit me up anytime.</p>
+       
+       <p>About my dreams and future career, I'm going to continue my study at the School of Electrical Engineering and Informatics ITB to learn computer science and later work in that field. I was inspired by my two older brothers who work as developers and programmers. Anyways, nice to meet you guys >__<</p>
+       <h2>(Unimportant) enthusiasts..</h2>
+       <div class="work">
+          <div class="workbox">
+              <div class="icon">
+                 <img src="kafka.jpg" alt="">
+              </div>
+              <div class="desc">
+                 <h3> Franz Kafka</h3>
+                 <p> Must read: Letters to Milena </p>
+              </div>
+          </div>
+
+          <div class="workbox">
+             <div class="icon">
+                <img src="gecko.jpg" alt="">
+             </div>
+             <div class="desc">
+                <h3> Geckos</h3>
+                <p> I want to own one so bad</p>
+             </div>
+         </div>
+
+         <div class="workbox">
+             <div class="icon">
+                <img src="wes.jpg" alt="">
+             </div>
+             <div class="desc">
+                <h3> Wes Anderson</h3>
+                <p> Thank you for existing</p>
+             </div>
+         </div>
+
+         <div class="workbox">
+             <div class="icon">
+                <img src="swiss.jpg" alt="">
+             </div>
+             <div class="desc">
+                <h3> Switzerland</h3>
+                <p> Who doesn't?</p>
+             </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="icon-container">
+        <a href="people.html" class="prev"><i class="fa fa-chevron-left"></i></a>
+        <a href="main page.html" class="next"><i class="fa fa-chevron-right"></i></a>
+    </div>
+
+</body>
+</html>

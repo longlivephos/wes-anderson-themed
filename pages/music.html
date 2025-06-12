@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Musics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux&display=swap" rel="stylesheet"> <!-- Importing the font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('music bg.jpg') no-repeat center center fixed; /* Background image */
+            background-size: cover;
+            text-align: center;
+            color: #fff;
+            font-family: 'Afacad Flux', sans-serif;
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px 0;
+            border-collapse: collapse; /* Collapse borders */
+            color: #fff;
+            border: 2px solid #ffd390; /* Border around the entire table */
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ffd390; /* Border around table cells */
+        }
+
+        th {
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0.6); /* Dark background for table header */
+        }
+
+        td {
+            font-size: 16px;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        tr:nth-child(odd) {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        td img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        td audio {
+            width: 100%;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .button-container {
+            margin: 20px 0;
+        }
+
+        .button-container a {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #ffd390;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button-container a:hover {
+            background-color: #ffd390;
+        }
+
+        .icon-container {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .icon-container a {
+            font-size: 24px;
+            color: white;
+            text-decoration: none;
+            background-color: rgb(130, 77, 44);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .icon-container a:hover {
+            color: #ffd390;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .icon-container a.prev {
+            position: fixed;
+            left: 20px;
+        }
+
+        .icon-container a.next {
+            position: fixed;
+            right: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="icon-container">
+        <a href="books page.html" class="prev" title="Previous">
+            <i class="fas fa-chevron-left"></i>
+        </a>
+        <a href="xdev.html" class="next" title="Next">
+            <i class="fas fa-chevron-right"></i>
+        </a>
+    </div>
+
+    <div class="header">
+        <h1>Neysa's Music Gallery</h1>
+        <p>Enjoy a selection of my favorite tracks! (˶˃ ᵕ ˂˶) .ᐟ.ᐟ </p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Singer</th>
+                <th>Title</th>
+                <th>Play Songs</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Adrianne Lenker</td>
+                <td>Anything</td>
+                <td>
+                    <img src="music 1.jpg" alt="Music 1">
+                    <audio controls>
+                        <source src="play1.mp3" type="audio/mp3">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>Tears For Fears</td>
+                <td>Head Over Heels</td>
+                <td>
+                    <img src="music 2.jpg" alt="Music 2">
+                    <audio controls>
+                        <source src="play2.mp3" type="audio/mp3">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>Billy Joel</td>
+                <td>Piano Man</td>
+                <td>
+                    <img src="music 3.jpg" alt="Music 3">
+                    <audio controls>
+                        <source src="play3.mp3" type="audio/mp3">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>Queen</td>
+                <td>Good Old Fashioned Lover Boy</td>
+                <td>
+                    <img src="music 4.jpg" alt="Music 4">
+                    <audio controls>
+                        <source src="play4.mp3" type="audio/mp3">
+                    </audio>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

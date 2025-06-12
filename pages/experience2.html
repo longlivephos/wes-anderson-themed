@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience - Commitee </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Homemade+Apple&family=Afacad+Flux&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: Afacad Flux, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ead7e3; /* Latar belakang dengan warna lebih terang */
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px auto;
+      max-width: 900px; /* Menyesuaikan ukuran kontainer agar tidak terlalu besar */
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px; /* Untuk memberi efek sudut tumpul */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .container img {
+      width: 40%; /* Ukuran gambar lebih kecil */
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .content {
+      width: 55%; /* Lebih lebar dari gambar */
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 2.5em;
+      margin-top: 30px;
+      color: #6f4f37; /* Warna yang lebih lembut untuk judul besar */
+      font-weight: bolder; /* Make the title bold */
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .btn {
+      background-color: #998155;
+      color: white;
+      padding: 8px 18px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.1em;
+      font-weight: normal; /* Normal weight for all buttons initially */
+    }
+
+    .btn:hover {
+      background-color: #6f4f37;
+    }
+
+    /* Highlight the active button */
+    .btn.active {
+      font-weight: bold; /* Make the active button bolder */
+      background-color: #6f4f37; /* Change background color when active */
+    }
+
+    .icon-container {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .icon-container a {
+            font-size: 24px;
+            color: white;
+            text-decoration: none;
+            background-color: rgb(130, 77, 44);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .icon-container a:hover {
+            color: #ffd390;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .icon-container a.prev {
+            position: fixed;
+            left: 20px;
+        }
+
+        .icon-container a.next {
+            position: fixed;
+            right: 20px;
+        }
+        
+
+  </style>
+</head>
+<body>
+
+  <div class="title">
+    ⋆ ˚ Experience ｡⋆୨୧˚
+  </div>
+
+  <!-- Section 1 -->
+  <div class="container">
+    <img src="exp2.jpg" alt="Competitions">
+    <div class="content">
+      <h1>Commitee & Volunteer 𖦹๋࣭ ⭑</h1>
+      <p>For 3 years I have been involved in many committees. Mostly, I was always assigned to the PDD (photographer) division such as in OASIS 15, Hamka, P5, and Etermusi. Sometimes I also entered the creative division such as in OASIS 16, Yearbook and graduation. I also had the chance to teach elementary school children with my friends. From here I got to know many great people and added to my experience in an organization.</p>
+    </div>
+  </div>
+
+  <!-- Buttons for navigation -->
+  <div class="button-container">
+    <button class="btn" onclick="window.location.href='experience1.html'">1</button>
+    <button class="btn active" onclick="window.location.href='experience2.html'">2</button>
+    <button class="btn" onclick="window.location.href='experience3.html'">3</button>
+  </div>
+
+  
+  <div class="icon-container">
+    <a href="experience1.html" class="prev" title="Previous">
+        <i class="fas fa-chevron-left"></i>
+    </a>
+    <a href="experience3.html" class="next" title="Next">
+        <i class="fas fa-chevron-right"></i>
+    </a>
+</div>
+
+</body>
+</html>
