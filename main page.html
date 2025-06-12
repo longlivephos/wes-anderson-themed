@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neysa's Page - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Homemade+Apple&family=Afacad+Flux&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Afacad Flux';
+            box-sizing: border-box;
+        }
+        .banner {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0,0,0,0.40),rgba(0,0,0,0.40));
+            position: relative;
+        }
+        .marquee {
+            width: 100%;
+            background-color: blanchedalmond;
+            color: #452e0d;
+            font-family: 'Afacad Flux';
+            font-size: 20px;
+            border-radius: 5px;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .navbar {
+            width: 90%;
+            padding: 30px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            width: 160px;
+            margin-top: -10px;
+            cursor: pointer;
+        }
+        .navbar ul li {
+            list-style: none;
+            display: inline-block;
+            margin: 20px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+            font-weight: 600;
+            padding: 15px;
+        }
+        li a:hover {
+            background: white;
+            transition: 0.6s;
+        }
+        .navbar a:hover {
+            color: black;
+        }
+        .content {
+            width: 100%;
+            position: absolute;
+            color: rgb(255, 226, 132);
+            top: 45%;
+            transform: translateY(-50%);
+            text-align: center;
+        }
+        .content h1 {
+            margin-top: 80px;
+            font-size: 80px;
+            font-weight: 800;
+        }
+        .button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #966218;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .banner video {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+        @media(min-aspect-ratio: 16/9) {
+            .banner video {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .sliding-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.4); 
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        .sliding-page-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .table-container {
+            display: table;
+            margin: 10px 0;
+            border-collapse: collapse;
+        }
+        .table-row {
+            display: table-row;
+        }
+        .table-cell {
+            display: table-cell;
+            padding: 10px 20px;
+            font-size: 24px;
+            text-align: left;
+            border: 1px solid white;
+        }
+        .photo-space {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 2px dashed white;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+        .text-box {
+    width: 200px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white; /* Ensures text inside the text box is white */
+    text-align: center;
+    font-size: 16px;
+}
+
+        .sliding-page video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <video autoplay loop muted plays-inline>
+            <source src="vid1.mp4" type="video/mp4">
+        </video>
+        <div class="navbar">
+            <img class="logo" src="logo1.png">
+            <ul>
+                <li><a href="books page.html" class="navbar">Books</a></li>
+                <li><a href="music.html" class="navbar">Musics</a></li>
+                <li><a href="xdev.html">Movies</a></li>
+                <li><a href="art.html">Art</a></li>
+                <li><a href="experience1.html">Life</a></li>
+                <li><a href="people.html">Friends</a></li>
+                <li><a href="about.html">Profile</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>⋆౨ Neysa's Page ৎ˚⟡˖</h1>
+            <a href="books page.html" class="button">LET'S GO!</a>
+        </div>
+    </div>
+
+    <div class="marquee">
+        <marquee behavior="scroll" direction="left">
+            Website ini dibuat untuk memenuhi tugas Informatika kelas XII
+        </marquee>
+    </div>
+
+    <div class="sliding-page">
+        <video autoplay loop muted plays-inline>
+            <source src="vid2.mp4" type="video/mp4">
+        </video>
+        <div class="sliding-page-content">
+            <div class="table-container">
+                <div class="table-row">
+                    <div class="table-cell">Nama:</div>
+                    <div class="table-cell">Neysa Alya Mukhbita</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">No Absen:</div>
+                    <div class="table-cell">32</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">Kelas:</div>
+                    <div class="table-cell">XII A2 1</div>
+                </div>
+            </div>
+            <div class="photo-space"> 
+<img src="bu des.jpg" alt=""/>
+            </div> 
+            <input type="text" class="text-box" placeholder="Deswati, S.Kom., M.Pd.">
+        </div>
+    </div>
+</body>
+</html>

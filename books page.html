@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Afacad Flux', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            background-image: url('books bg.png'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; 
+            color: white; 
+            position: relative;
+        }
+
+
+        .header {
+            margin-bottom: 20px;
+        }
+        .header h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px; 
+    line-height: 1.2; 
+}
+
+.header p {
+    font-size: 18px;
+    margin-top: 0; 
+    line-height: 1.2; 
+    text-align: center;
+}
+
+
+        .headline-container {
+            margin-bottom: 20px;
+        }
+
+        .headline-text {
+            font-size: 50px; 
+            font-weight: bold; 
+            text-align: center; 
+        }
+
+        .books-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 70%;
+            margin-bottom: 40px; 
+        }
+
+        .book {
+            text-align: center;
+        }
+
+        .book img {
+            max-height: 300px;
+            display: block;
+            margin: 0 auto;
+            box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .book img:hover {
+            transform: scale(1.05);
+            box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .book-title {
+            font-family: 'Afacad Flux', sans-serif;
+            font-size: 18px; 
+            margin-top: 20px;
+            padding: 10px;
+            background: white; 
+            color: #333; 
+            border-radius: 5px; 
+        }
+
+        .icon-container {
+            position: fixed; 
+            top: 50%; 
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .icon-container a {
+            font-size: 24px;
+            color: white;
+            text-decoration: none;
+            background-color: rgb(130, 77, 44);
+            width: 60px; 
+            height: 60px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%; 
+            transition: all 0.3s;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .icon-container a:hover {
+            color: #ffd390;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .icon-container a.prev {
+            position: fixed;
+            left: 20px; 
+        }
+
+        .icon-container a.next {
+            position: fixed;
+            right: 20px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Neysa's Mini Bookshelf</h1>
+        <p>Try and read these.. (˶˃ ᵕ ˂˶) .ᐟ.ᐟ </p>
+    </div>
+
+    <div class="icon-container">
+        <a href="main page.html" class="prev" title="Previous">
+            <i class="fas fa-chevron-left"></i>
+        </a>
+        <a href="music.html" class="next" title="Next">
+            <i class="fas fa-chevron-right"></i>
+        </a>
+    </div>
+    <div class="books-container">
+        <div class="book">
+            <a href="https://www.goodreads.com/book/show/485894.The_Metamorphosis" target="_blank"> 
+                <img src="book1.jpg" alt="Book 1">
+            </a>
+            <div class="book-title">The Metamorphosis</div>
+        </div>
+        <div class="book">
+            <a href="https://www.goodreads.com/book/show/60503957-tiga-dalam-kayu" target="_blank"> 
+                <img src="book2.jpg" alt="Book 2">
+            </a>
+            <div class="book-title">Tiga dalam Kayu</div>
+        </div>
+        <div class="book">
+            <a href="https://www.goodreads.com/book/show/57945316-babel" target="_blank"> 
+                <img src="book3.jpg" alt="Book 3">
+            </a>
+            <div class="book-title">Babel</div>
+        </div>
+        <div class="book">
+            <a href="https://www.goodreads.com/book/show/40961230-the-travelling-cat-chronicles" target="_blank"> 
+                <img src="book4.jpg" alt="Book 4">
+            </a>
+            <div class="book-title">The Travelling Cat Chronicles</div>
+        </div>
+    </div>
+    
+
+</body>
+</html>
